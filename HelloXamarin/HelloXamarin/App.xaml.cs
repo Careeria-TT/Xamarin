@@ -17,13 +17,30 @@ namespace HelloXamarin
             {
                 Content = new StackLayout
                 {
-                VerticalOptions = LayoutOptions.Center,
+                //VerticalOptions = LayoutOptions.Center,
                 Children = {
                     new Label
                     {
                         HorizontalTextAlignment = TextAlignment.Center,
-                        Text = "Moro Xamarin!",
-                        TextColor = Color.Red
+                        Text = "Arvaa luku",
+                        TextColor = Color.Red,
+                        BackgroundColor = Color.Black
+                    },
+                    new Label
+                    {
+                        HorizontalTextAlignment = TextAlignment.Center,
+                        Text = "Sovellusversio 0.10",
+                        TextColor = Color.Black,
+                        BackgroundColor = Color.Silver
+                    },
+                    new Entry
+                    {
+                        Keyboard = Keyboard.Numeric,
+                        Text = ""
+                    },
+                    new Button
+                    {
+                        Text = "Arvaa"
                     }
                 }
             }
