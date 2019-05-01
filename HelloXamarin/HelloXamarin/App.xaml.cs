@@ -1,6 +1,9 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace HelloXamarin
@@ -9,12 +12,24 @@ namespace HelloXamarin
     {
         public App()
         {
-            InitializeComponent();
-
-            MainPage = new MainPage();
-        }
-
-        protected override void OnStart()
+            // The root page of your application
+            MainPage = new ContentPage
+            {
+                Content = new StackLayout
+                {
+                VerticalOptions = LayoutOptions.Center,
+                Children = {
+                    new Label
+                    {
+                        HorizontalTextAlignment = TextAlignment.Center,
+                        Text = "Moro Xamarin!",
+                        TextColor = Color.Red
+                    }
+                }
+            }
+        };
+    }
+    protected override void OnStart()
         {
             // Handle when your app starts
         }
