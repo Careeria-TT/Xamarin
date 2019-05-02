@@ -35,34 +35,37 @@ namespace HelloXamarin
             arvauksenTulosLabel = new Label();
             arvauksenTulosLabel.Text = "";
 
+            // Esimerkki XAML-sivun käytöstä
+            //MainPage = new EkaXamlSivu();
+
             // The root page of your application
             MainPage = new ContentPage
             {
                 Content = new StackLayout
                 {
-                //VerticalOptions = LayoutOptions.Center,
-                Children = {
-                    new Label
-                    {
-                        HorizontalTextAlignment = TextAlignment.Center,
-                        Text = "Arvaa luku",
-                        TextColor = Color.Red,
-                        BackgroundColor = Color.Black
-                    },
-                    new Label
-                    {
-                        HorizontalTextAlignment = TextAlignment.Center,
-                        Text = "Sovellusversio 0.10",
-                        TextColor = Color.Black,
-                        BackgroundColor = Color.Silver
-                    },
-                    syötekenttä,
-                    arvaaNappi,
-                    arvauksenTulosLabel
+                    //VerticalOptions = LayoutOptions.Center,
+                    Children = {
+                            new Label
+                            {
+                                HorizontalTextAlignment = TextAlignment.Center,
+                                Text = "Arvaa luku",
+                                TextColor = Color.Red,
+                                BackgroundColor = Color.Black
+                            },
+                            new Label
+                            {
+                                HorizontalTextAlignment = TextAlignment.Center,
+                                Text = "Sovellusversio 0.10",
+                                TextColor = Color.Black,
+                                BackgroundColor = Color.Silver
+                            },
+                            syötekenttä,
+                            arvaaNappi,
+                            arvauksenTulosLabel
+                        }
                 }
-            }
-        };
-    }
+            };
+        }
 
         private void ArvaaNappi_Clicked(object sender, EventArgs e)
         {
